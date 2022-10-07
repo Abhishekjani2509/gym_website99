@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.sendFile(buildPath+"/index.html");
-  // res.send("backend is working");s
+  // res.send("backend is working");
 });
 
 
