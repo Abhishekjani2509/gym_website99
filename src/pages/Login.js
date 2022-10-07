@@ -24,7 +24,7 @@ const Login = () => {
   }
 
   const handleSubmit = (e) =>{
-    // e.preventDefault();
+    e.preventDefault();
     console.log(loginState)
   }
 
@@ -35,7 +35,7 @@ const Login = () => {
     
     <div className='flex flex-col justify-center items-center h-screen bg-white'>
       <div id='form' className='block bg-neutral-500 p-6 rounded-xl shadow-md w-90 lg:w-[500px] md:w-[400px] text-white h-[500px]'>
-        <form action="" method='post' onSubmit={handleSubmit}>
+        <form action="" onSubmit={handleSubmit}>
 
 
 

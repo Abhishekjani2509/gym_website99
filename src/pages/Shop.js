@@ -7,14 +7,11 @@ import {shop} from "../data"
 import Cart from './Cart';
 
 
-// import {useHistory} from "react-router-dom"
-// const history = useHistory();
 
 
 const Shop = () => {
 
   const {items,title} = shop;
-  // const [show , setShow] = useState(true)
 
   const [cart , setCart] = useState([])
 
@@ -39,7 +36,7 @@ const Shop = () => {
 
 
   return (
-    <div className='bg-neutral-500 h-[5000px] w-full max-w-[1400px] '>
+    <div className='bg-neutral-500 h-[2600px] w-full max-w-[1400px] '>
       <Header />
       <div className='pt-16 flex flex-col'>
         <h1 className='h2 text-center text-white -mb-[40px]'>{title} <span className='text-primary-200'>.</span></h1>

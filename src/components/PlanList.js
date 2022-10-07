@@ -11,8 +11,10 @@ const PlanList = ({plans}) => {
   const [index,setIndex] = useState(0)
   const navigate = useNavigate();
   
-  const paymentPage = () => {
-    navigate('/paymentpage');
+  const paymentPage = (cart) => {
+    cart = [cart]
+    // console.log(cart)
+    navigate('/paymentpage',{state:{cart}});
   }
 
   return <div className='flex flex-col lg:flex-row item-center justify-center max-w-[1280px] mx-auto gap-y-4'>
@@ -52,7 +54,7 @@ const PlanList = ({plans}) => {
                 })}
               </ul>
               <button 
-              onClick={paymentPage}
+              onClick={()=>paymentPage(plan)}
               className={`${currentIndex===index 
               ? `bg-white text-neutral-500` 
               :`border border-neutral-500` 

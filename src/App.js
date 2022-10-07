@@ -18,7 +18,7 @@ import Shop from './pages/Shop';
 import Cart from './pages/Cart';
 import PaymentPage from './pages/PaymentPage';
 
-function App() {
+const App = () => {
   // aos initialization
   Aos.init({
     duration: 2500,

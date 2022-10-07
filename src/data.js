@@ -20,8 +20,10 @@ import CommunityIcn from '../src/assets/img/community/icons/community-icn.svg';
 import QuestionMarkIcn from '../src/assets/img/faq/icons/question-mark.svg';
 import itemImg1 from "./item1.avif"
 import itemImg2 from "./item2.avif"
+import locationSVG from "./locationSVG.png"
 
 export const header = {
+
   logo: Logo,
   btnLoginText: 'Log in',
   btnSignupText: 'Sign Up',
@@ -38,6 +40,7 @@ export const nav = [
 ];
 
 export const banner = {
+  locationLogo:locationSVG,
   titlePart1: 'Get the best part of your day',
   titlePart2: '– you fit here.',
   subtitle:
@@ -96,18 +99,20 @@ export const pricing = {
   title: 'Pricing plan',
   plans: [
     {
-      name: 'Basic',
-      price: '1,500',
+      name: 'Basic plan',
+
+      price: '1500',
       list: [
         { name: 'unlimited gym access' },
         { name: '1 training programs' },
         { name: 'free fitness consultation' },
       ],
       delay: 600,
+      amount:1,
     },
     {
-      name: 'Premium',
-      price: '4,000',
+      name: 'Premium plan',
+      price: '4000',
       list: [
         { name: 'unlimited gym access' },
         { name: '5 training programs' },
@@ -115,10 +120,11 @@ export const pricing = {
         { name: 'personal trainer' },
       ],
       delay: 800,
+      amount:1,
     },
     {
-      name: 'Elite',
-      price: '6,000',
+      name: 'Elite plan',
+      price: '6000',
       list: [
         { name: 'unlimited gym access' },
         { name: 'all training programs' },
@@ -127,6 +133,7 @@ export const pricing = {
         { name: '50% off drinks' },
       ],
       delay: 1000,
+      amount:1,
     },
   ],
 };
@@ -222,7 +229,8 @@ export const shop = {
       name:"Treadmill",
       price: 499, 
       url:itemImg1,
-      discription:"good quality,easy exchange,fast delivary,1 year warrenty"
+      discription:"good quality,easy exchange,fast delivary,1 year warrenty",
+      amount:1,
     },
 
     {
@@ -230,7 +238,8 @@ export const shop = {
       name:"Gym T-shirt",
       price: 499,
       url:itemImg2,
-      discription:"Men Recycled Polyester Gym T-Shirt - Black Print"
+      discription:"Men Recycled Polyester Gym T-Shirt - Black Print",
+      amount:1,
     },
 
     {
@@ -238,7 +247,8 @@ export const shop = {
       name:"erer",
       price: 499,
       url:itemImg1,
-      discription:"1. good quality"
+      discription:"1. good quality",
+      amount:1,
     },
 
     {
@@ -246,7 +256,8 @@ export const shop = {
       name:"cvv",
       price: 499,
       url:itemImg1,
-      discription:"1. good quality"
+      discription:"1. good quality",
+      amount:1,
     },
 
     {
@@ -254,7 +265,8 @@ export const shop = {
       name:"eryer",
       price: 499,
       url:itemImg1,
-      discription:"1. good quality"
+      discription:"1. good quality",
+      amount:1,
     },
 
     {
@@ -262,7 +274,8 @@ export const shop = {
       name:"vbnc",
       price: 499,
       url:itemImg1,
-      discription:"1. good quality"
+      discription:"1. good quality",
+      amount:1,
     },
 
     {
@@ -270,14 +283,16 @@ export const shop = {
       name:"asdfg",
       price: 499,
       url:itemImg1,
-      discription:"1. good quality"
+      discription:"1. good quality",
+      amount:1,
     },
     {
       key:8,
       name:"gym bag",
       price: 499,
       url:itemImg1,
-      discription:"1. good quality"
+      discription:"1. good quality",
+      amount:1,
     },
   ]
 };

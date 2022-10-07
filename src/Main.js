@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 // import { BrowserRouter as Router,Route} from 'react-router-dom';
 // import { Router } from 'react-router-dom';
@@ -27,14 +27,18 @@ import Footer from './components/Footer';
 // import Login from './pages/Login';
 // import Shop from './pages/Shop';
 
-function App  () {
+const App = () => {
+
+  
+  const [showCart , setShowCart] = useState(false)
+
   Aos.init({
     duration: 2500,
     delay:400,
   })
   return (
     <div className='max-w-[1440px] mx-auto bg-page overflow-hidden relative'>
-      <Header />
+      <Header showCart={showCart} setShowCart={setShowCart}/>
       <Banner />
       <About />
       <Workouts />

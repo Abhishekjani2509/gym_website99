@@ -14,7 +14,10 @@ const Join = () => {
         <div className='max-w-[350px] lg:max-w-[492px] ml-[30px]' data-aos="fade-left" data-aos-offset="100" data-aos-delay="200">
           <h2 className='text-white h1 md:text-[60px] md:leading-[62px] mb-4 lg:mb-6'>Want to join <span className='text-primary-200'>& </span>have fun?</h2>
           <p className='text-body-sm text-white md:text-body-md mb-4 lg:mb-6 max-w-[348px] md:max-w-[470px] lg:max-w-[492px]'>{subtitle}</p>
-          <button className='btn btn-secondary btn-lg'>{btnText}</button>
+          <a href="#pricing">
+            <button className='btn btn-secondary btn-lg'>{btnText}</button>
+
+          </a>
         </div>
       </div>
     </div>

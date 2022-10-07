@@ -35,18 +35,21 @@ app.get("/shop", (req, res) => {
   // res.send("backend is working");
 });
 
-app.post('/login', (req, res) => {
+// app.post('/login', (req, res) => {
 
-  console.log(req.body);
-  then(() => {
-    res.sendFile(buildPath+"/index.html");
-  }).catch(() => {
-    res.status(400).send("not saved ")
-  });
+//   console.log(req.body);
+//   then(() => {
+//     res.sendFile(buildPath+"/index.html");
+//   }).catch(() => {
+//     res.status(400).send("not saved ")
+//   });
+// });
+
+
+app.get("/paymentPage", (req, res) => {
+  res.sendFile(buildPath+"/index.html");
+  // res.send("backend is working");
 });
-
-
-
 
 app.listen(port, () => {
   console.log(`Port is working on ${port}`);

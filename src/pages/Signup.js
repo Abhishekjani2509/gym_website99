@@ -37,7 +37,7 @@ const Signup = () => {
   return (
     <div className='flex flex-col justify-center items-center h-screen bg-white'>
       <div id='form' className='block bg-neutral-500 p-6 rounded-xl shadow-md w-90 lg:w-[500px] md:w-[400px] text-white'>
-        <form action=""  onSubmit={handleSubmit}>
+        <form action="" onSubmit={handleSubmit}>
             <div>
                 <h1 className='text-primary-200 text-3xl font-semibold my-4 h1'>Sign up</h1>
                 <label htmlFor="username" className='text-sm'>Username</label><br />
@@ -77,7 +77,6 @@ const Signup = () => {
 
             </div>
 
-            {/* <button type="submit" className='bg-neutral-500 text-white'>Login</button> */}
 
             <input type="submit" name="" id='signup' value="Sign in" className='bg-green-500 w-full h-10 mt-3 cursor-pointer rounded-md text-white hover:bg-green-500 hover:outline outline-2 outline-green-500 outline-offset-2 text-sm' />
 
@@ -88,12 +87,6 @@ const Signup = () => {
 
         
       </div>
-
-
-
-      {/* <br /><br /><br /><br />
-      <h2>alreay have a account? login now!</h2>
-      <button onClick={loginPage} className='bg-neutral-500 text-white'>Login</button> */}
 
     </div>
     
