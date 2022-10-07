@@ -4,10 +4,8 @@ var app = express();
 
 // const bodyParser = require("body-parser");
 
-
 const port =4000;
 // app.use(bodyParser.urlencoded({ extended: true }));
-
 // app.use(express.static(path.join(__dirname,'backend/build')));
 // app.get("/", (req, res) => {
 //   res.sendFile(path.join(__dirname,"build", "index.html"));
