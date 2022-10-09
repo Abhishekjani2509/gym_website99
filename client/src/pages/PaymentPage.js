@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import axios from "axios"
 import {useLocation} from 'react-router-dom';
 
 
@@ -7,6 +7,7 @@ const PaymentPage = (props) => {
 
 const location  = useLocation();
 const cart = (location.state.cart)
+
 console.log(cart)
 
 
@@ -29,7 +30,12 @@ console.log(cart)
   const handleSubmit = (e) =>{
     e.preventDefault();
     console.log(signupState)
+    // axios.post("/payment", cart)
+    axios.post("/payment",signupState)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   }
+
 
   // const cart = (location.state.cart)
   console.log(cart)
@@ -75,10 +81,10 @@ console.log(cart)
                 <input type="text" value={signupState.email} onChange={handleChange} placeholder='example@gmail.com' autoComplete='off' name="email" id="email" className='h-8 w-full rounded-md border border-gray-700 text-sm pl-2 bg-transparent outline-green-500 shadow-sm mb-2'  />
             </div>
 
-            <div>
+            {/* <div>
             <label htmlFor="password" className='text-sm'>Password</label>
             <input type="password" value={signupState.password} onChange={handleChange} placeholder='Test@1234' autoComplete='off' name="password" id="password" className='h-8 w-full rounded-md border border-gray-700 text-sm pl-2 bg-transparent outline-green-500 shadow-sm mb-2'/>
-            </div>
+            </div> */}
 
             <div>
                 <label htmlFor="address" className='text-sm'>Address</label><br />
@@ -86,7 +92,7 @@ console.log(cart)
             </div>
 
 
-            <input type="submit" name="" id='signup' value="Sign in" className='bg-green-500 w-full h-10 mt-3 cursor-pointer rounded-md text-white hover:bg-green-500 hover:outline outline-2 outline-green-500 outline-offset-2 text-sm' />
+            <input type="submit" name="" id='signup' value="Pay" className='bg-green-500 w-full h-10 mt-3 cursor-pointer rounded-md text-white hover:bg-green-500 hover:outline outline-2 outline-green-500 outline-offset-2 text-sm' />
 
 
 

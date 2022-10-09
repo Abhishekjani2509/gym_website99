@@ -1,8 +1,11 @@
 import React,{useState} from 'react'
-
+import axios from "axios"
 import { useNavigate } from 'react-router-dom'
+// import { useHistory } from "react-router-dom"
+const Login = ({}) => {
 
-const Login = () => {
+ 
+
 
   const [loginState, setLoginState] = useState({
     email:"",
@@ -25,10 +28,18 @@ const Login = () => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    console.log(loginState)
+    // console.log(loginState)
+    
+    axios.post("/loginreq", loginState)
+      .then(res => {
+        alert(res.data.message)
+        // setLoginUser(res.data.user)
+        // history.push("/cart")
+      })
+      
   }
 
-
+  
 
   return (
 
@@ -57,7 +68,7 @@ const Login = () => {
 
             <input type="submit" name="" id='signup' value="Let's get started" className='bg-green-500 w-full h-10 mt-3 cursor-pointer rounded-md text-white hover:bg-green-500 hover:outline outline-2 outline-green-500 outline-offset-2 text-sm' />
 
-            <p className='test-xs my-2 mt-40'>Don't have a account? <button onClick={signupPage} className='text-green-600 hover:text-green-400'>login</button></p>
+            <p className='test-xs my-2 mt-40'>Don't have a account? <button onClick={signupPage} className='text-green-600 hover:text-green-400'>Signup</button></p>
 
 
         </form>
@@ -74,37 +85,6 @@ const Login = () => {
     </div>
 
 
-
-
-
-    // <div className='flex flex-col items-center'>
-    //   <h1 className='h1 text-black'>login page <span className='h1 text-primary-200'>.</span></h1>
-    //   <div className='m-5 p-5 rounded-lg bg-neutral-500 min-h-[500px] lg:min-w-[700px] flex flex-col justify-between items-center'>
-
-    //     <form action="" onSubmit={handleSubmit} className="w-full p-5">
-    //       <div>
-    //         <label htmlFor="email">E-mail</label>
-    //         <input type="text" value={loginState.email} onChange={handleChange} placeholder='example@gmail.com' autoComplete='off' name="email" id="email"/>
-    //       </div>
-
-    //       <div>
-    //         <label htmlFor="password">password</label>
-    //         <input type="password" value={loginState.password} onChange={handleChange} placeholder='Test@1234' autoComplete='off' name="password" id="password"/>
-    //       </div>
-
-    //       <button type="submit" className='btn btn-sm btn-primary hover:text-black transition w-full'>Login</button>
-
-
-    //     </form>
-
-    //     <div>
-    //       <h2 className='text-white'>dont have account? <button onClick={signupPage} className='btn btn-sm text-white hover:text-primary-200 transition'>Sign up</button></h2>
-
-    //     </div>
-
-
-    //   </div>
-    // </div>
   )
 }
 
