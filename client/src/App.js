@@ -25,7 +25,7 @@ const App = () => {
     delay:400,
   })
 
-  const props=["hi"]
+  // const props=["hi"]
 
   return (
 
@@ -36,7 +36,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart props={props}/>} />
+          <Route path="/cart" element={<Cart/>} />
           <Route path="/paymentpage" element={<PaymentPage />} />
         </>
       </Routes>

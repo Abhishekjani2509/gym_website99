@@ -3,6 +3,7 @@ import axios from "axios"
 import { useNavigate } from 'react-router-dom'
 // import { useHistory } from "react-router-dom"
 const Login = ({}) => {
+  
 
  
 
@@ -11,6 +12,8 @@ const Login = ({}) => {
     email:"",
     password:"",
   })
+
+  const [userData , setUserData] = useState()
 
   const navigate = useNavigate();
 
@@ -21,18 +24,27 @@ const Login = ({}) => {
   const handleChange = (e) =>{
     const name = e.target.name;
     const value = e.target.value;
-
+    
     setLoginState({...loginState , [name] : value})
     // console.log(loginState)
   }
-
+  
   const handleSubmit = (e) =>{
     e.preventDefault();
+    // console.log(userData)
+    // if(userData.phone>0){
+    //   navigate('/')
+    // }
     // console.log(loginState)
     
     axios.post("/loginreq", loginState)
       .then(res => {
         alert(res.data.message)
+        setUserData(res.data.user);
+        if(userData){
+          navigate('/shop',{state:{userData}})
+        }
+        // console.log(userData)
         // setLoginUser(res.data.user)
         // history.push("/cart")
       })

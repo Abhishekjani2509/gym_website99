@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 
 
+
 // import { BrowserRouter as Router,Route} from 'react-router-dom';
 // import { Router } from 'react-router-dom';
 // import { Routes ,Route } from 'react-router-dom';
@@ -31,6 +32,10 @@ import Footer from './components/Footer';
 const App = () => {
 
   
+
+  // console.log(userData.username)
+
+  
   const [showCart , setShowCart] = useState(false)
 
   Aos.init({
@@ -39,7 +44,8 @@ const App = () => {
   })
   return (
     <div className='max-w-[1440px] mx-auto bg-page overflow-hidden relative'>
-      <Header showCart={showCart} setShowCart={setShowCart}/>
+      <Header showCart={showCart} setShowCart={setShowCart} />
+      {/* <Header userData={userData}/> */}
       <Banner />
       <About />
       <Workouts />

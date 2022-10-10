@@ -8,9 +8,8 @@ import NavMobile from "../components/NavMobile"
 
 import {RiMenu4Fill , RiCloseFill, RiCodeBoxFill} from "react-icons/ri"
 
-const Header = ({showCart,setShowCart}) => {
+const Header = ({showCart,setShowCart,userData}) => {
 
-  // console.log(showCart)
   const navigate = useNavigate();
 
   const [isActive , setIsActive] = useState(false)
@@ -35,6 +34,8 @@ const Header = ({showCart,setShowCart}) => {
   // }
 
 
+
+
   const {logo,btnLoginText , btnSignupText} = header;
   return (
     
@@ -48,6 +49,8 @@ const Header = ({showCart,setShowCart}) => {
       <Nav />
 
       <div className='hidden lg:flex space-x-4'>
+        
+        {/* {userData.username === null ? <div>new</div> : <div>{userData.username}</div>} */}
         <button onClick={loginPage} className='btn btn-sm text-white hover:text-primary-200 transition  '>{btnLoginText}</button>
         <button onClick={signupPage} className='btn btn-sm btn-primary'>{btnSignupText}</button>
         {/* <button className='rounded-[] btn btn-sm btn-primary'>hi</button> */}

@@ -7,9 +7,19 @@ import {shop} from "../data"
 import Cart from './Cart';
 
 
+import {useLocation} from 'react-router-dom';
 
 
 const Shop = () => {
+
+  const location  = useLocation();
+  console.log(location.state.userData)
+  // let userData = {
+  //   username: ""
+  // }
+  // if(location.state.userData){
+
+  // }
 
   const {items,title} = shop;
 
