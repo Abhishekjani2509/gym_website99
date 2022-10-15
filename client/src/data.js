@@ -20,6 +20,13 @@ import CommunityIcn from '../src/assets/img/community/icons/community-icn.svg';
 import QuestionMarkIcn from '../src/assets/img/faq/icons/question-mark.svg';
 import itemImg1 from "./item1.avif"
 import itemImg2 from "./item2.avif"
+import itemImg3 from "./item3.jpg"
+import itemImg4 from "./item4.avif"
+import itemImg5 from "./item5.avif"
+import itemImg6 from "./item6.avif"
+import itemImg7 from "./item7.avif"
+import itemImg8 from "./item8.avif"
+import itemImg9 from "./item9.avif"
 import locationSVG from "./locationSVG.png"
 
 export const header = {
@@ -227,7 +234,7 @@ export const shop = {
     {
       key:1,
       name:"Treadmill",
-      price: 499, 
+      price: 20000, 
       url:itemImg1,
       discription:"good quality,easy exchange,fast delivary,1 year warrenty",
       amount:1,
@@ -236,7 +243,7 @@ export const shop = {
     {
       key:2,
       name:"Gym T-shirt",
-      price: 499,
+      price:300,
       url:itemImg2,
       discription:"Men Recycled Polyester Gym T-Shirt - Black Print",
       amount:1,
@@ -244,53 +251,61 @@ export const shop = {
 
     {
       key:3,
-      name:"erer",
-      price: 499,
-      url:itemImg1,
+      name:"Peanut Butter",
+      price: 300,
+      url:itemImg3,
       discription:"1. good quality",
       amount:1,
     },
 
     {
       key:4,
-      name:"cvv",
-      price: 499,
-      url:itemImg1,
+      name:"Gym Bag",
+      price: 799,
+      url:itemImg4,
       discription:"1. good quality",
       amount:1,
     },
 
     {
       key:5,
-      name:"eryer",
-      price: 499,
-      url:itemImg1,
+      name:"Gloves",
+      price: 300,
+      url:itemImg5,
       discription:"1. good quality",
       amount:1,
     },
 
     {
       key:6,
-      name:"vbnc",
-      price: 499,
-      url:itemImg1,
+      name:"Dumbell",
+      price: 3000,
+      url:itemImg6,
       discription:"1. good quality",
       amount:1,
     },
 
     {
       key:7,
-      name:"asdfg",
-      price: 499,
-      url:itemImg1,
+      name:"Gym Cycle",
+      price: 7999,
+      url:itemImg7,
       discription:"1. good quality",
       amount:1,
     },
     {
       key:8,
-      name:"gym bag",
-      price: 499,
-      url:itemImg1,
+      name:"Bench Press",
+      price: 7000,
+      url:itemImg8,
+      discription:"1. good quality",
+      amount:1,
+    },
+    {
+      key:9,
+      name:"Cable Cross Machine",
+      price: 9999,
+      url:itemImg9,
       discription:"1. good quality",
       amount:1,
     },

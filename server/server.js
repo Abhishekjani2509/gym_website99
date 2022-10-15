@@ -4,6 +4,7 @@ const cors = require("cors");
 var app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const nodemailer = require("nodemailer");
 
 app.use(cors());
 app.use(express.json());
@@ -84,13 +85,42 @@ app.post("/loginreq",(req, res)=>{
 
 
 
-// app.post("/payment",(req, res)=>{
+app.post("/payment",(req, res)=>{
 //   console.log(req.body.username);
 //   console.log(req.body.phone);
 //   console.log(req.body.email);
   
-//   console.log(req.body);
-// })
+  console.log(req.body);
+
+
+  let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "abhishekjani-inft@atharvacoe.ac.in",
+      pass: ""
+    },
+    tls: {
+      rejectUnauthorized: false,
+    }
+  })
+
+
+  var mail = {
+    from: 'abhishekjani-inft@atharvacoe.ac.in',
+    to: 'abhishekjani2509@gmail.com',
+    subject: `Gym`,
+    text: `Your product/service has been registered at ${req.body.email} and will be delivered to ${req.body.address}`
+  }
+  transporter.sendMail(mail, (err) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log("Mail sent")
+    }
+  })
+
+
+})
 
 
 

@@ -15,7 +15,7 @@ console.log(cart)
     username:"",
     phone:"",
     email:"",
-    password:"",
+    // password:"",
     address:"",
 })
 
@@ -70,8 +70,8 @@ console.log(cart)
             </div>
 
             <div>
-                <label htmlFor="phone" className='text-sm'>Phone number</label><br />
-                <input type="text" value={signupState.phone} onChange={handleChange} placeholder='9988110066' autoComplete='off' name="phone" id="phone" className='h-8 w-full rounded-md border border-gray-700 text-sm pl-2 bg-transparent outline-green-500 shadow-sm mb-2'/>
+                <label htmlFor="phone" className='text-sm'>Card number</label><br />
+                <input type="text" value={signupState.phone} onChange={handleChange} placeholder='9982 2556 8110 0066' autoComplete='off' name="phone" id="phone" className='h-8 w-full rounded-md border border-gray-700 text-sm pl-2 bg-transparent outline-green-500 shadow-sm mb-2'/>
             </div>
 
 

@@ -14,6 +14,7 @@ const Header = ({showCart,setShowCart,userData}) => {
 
   const [isActive , setIsActive] = useState(false)
   const [navMobile , setNavMobile] = useState(false)
+  // const [isLogged , setIsLogged] = useState(false)
 
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
